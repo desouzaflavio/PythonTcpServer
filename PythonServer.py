@@ -5,13 +5,13 @@ HOST = "localhost"
 PORT = 5000
 
 def conected(Conection, Client):
-    print 'Conectado por', Client
+    print ('Conectado por', Client)
 
     while True:
         msg = Conection.recv(1024)
         if not msg: break
-        print Client, msg
-        print 'Terminando conexão', Client
+        print (Client, msg)
+        print ('Terminando conexão', Client)
         
     Conection.close()
     _thread.exit()
