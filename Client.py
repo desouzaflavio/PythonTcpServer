@@ -1,3 +1,5 @@
+#Cliente para conexão TCP
+
 import socket
 
 HOST = "localhost"

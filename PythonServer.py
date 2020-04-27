@@ -1,3 +1,5 @@
+#Servidor para conexão TCP
+
 import socket
 import _thread
 
