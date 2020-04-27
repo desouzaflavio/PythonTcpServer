@@ -27,5 +27,3 @@ while True:
     _thread.start_new_thread(conected, tuple([Conection, Client]))
 
 tcp.close()
-
-
