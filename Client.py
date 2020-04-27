@@ -1,3 +1,5 @@
+#Cliente para conexão TCP
+
 import socket
 
 HOST = "localhost"
@@ -8,11 +10,13 @@ dest = (HOST, PORT)
 
 tcp.connect(dest)
 
-print 'Para Sair pressione CTRL+x\n'
-msg = raw_input()
+print ('Para Sair pressione CTRL+x\n')
+msg = input()
+msg_encoded = msg.encode()
 
-while msg <> '\x18':
-    tcp.send(msg)
-    msg = raw_input()
+while msg != "\x18":
+    tcp.send(msg_encoded)
+    msg = input()
+    msg_encoded = msg.encode()
 
 tcp.close()
